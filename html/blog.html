@@ -26,7 +26,7 @@
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/iJ75fUbPa_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <h2>Above is a video of the Raf Simons Autumn / Winter collection, titled "Riot! Riot! Riot!" </h2>
-    <p>Known as the peak of anti-fashion in the early 2000s, Raf Simons- a Belgian Fashion designer, debuted the Fall/ Winter collection in 2001, named “Riot! Riot! Riot!” and is seen as today to shape out the current archival fashion landscape. 
+    <p>Known as the peak of anti-fashion in the early 2000s, Raf Simons- a Belgian Fashion designer, released the Fall/ Winter collection in 2001, named “Riot! Riot! Riot!” and is seen as today to shape out the current archival fashion landscape. 
         The 2001-2002 collection is seen as Raf Simons return collection, after his hiatus of 3 years. The clothing pieces consist of ragged, industrial-influenced and hyper-stylized looks, 
         which Raf Simons had not been known for due to his previous works consisting of sleek, tightly-tailored silhouettes. 
         The collection walk was set in an eerie warehouse, with scaffolding stacked high in the center of the stage, 
@@ -38,9 +38,23 @@
         with the camo-plastered Patched Bomber jacket now reaching 47000 USD, and being worn by various celebrities such as Drake, and Kanye West. </p>
         <p id="question">How do you like this collection? Leave a comment down below!</p>
 
-        <button class="comment_button" type="button">
-            Click here to leave a comment!
-        </button>
+        <section id="app">
+            <div class="container">
+              <div class="row">
+                <div class="col-6">
+                  <div class="comment">
+                <p v-for="items in item" v-text="items"></p>
+                  </div>
+                  </div>
+                  </div>
+              <div class="row">
+                <div class="col-6">
+              <textarea type="text" class="input" placeholder="Click Here To Leave A Comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+                  <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+                </div>
+              </div>
+            </div>
+          </section>
 </body>
 <footer>
     &copy; 2021 Keiji Roemmich <br><i class="far fa-envelope"></i>: keiji0627@live.com <br>
