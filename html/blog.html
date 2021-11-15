@@ -42,15 +42,16 @@
         <section id="app">
             <div class="container">
               <div class="row">
-                <div class="col-6">
+                <div class="column-6">
                   <div class="comment">
                 <p v-for="items in item" v-text="items"></p>
                   </div>
                   </div>
                   </div>
               <div class="row">
-                <div class="col-6">
-              <textarea type="text" class="input" placeholder="Click Here To Leave A Comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+                <div class="column-6">
+              <textarea type="text" class="input" placeholder="Click Here To Leave A Comment"
+              v-model="newItem" ></textarea>
                   <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
                 </div>
               </div>
